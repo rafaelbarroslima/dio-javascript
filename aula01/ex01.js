@@ -6,9 +6,11 @@
  */
 
 const precoCombustivel = 3.15;
-const consumoMedio = 12;
-const distanciaPercorrida = 240;
+const kmPorLitro = 12;
+const distanciaPercorrida = 235;
 
-const gastoMedio = (distanciaPercorrida / 12) * precoCombustivel;
+const litrosConsumidos = distanciaPercorrida / kmPorLitro;
+const valorGasto = litrosConsumidos * precoCombustivel;
 
-console.log(gastoMedio);
+console.log("Valor gasto: R$ " + valorGasto.toFixed(2));
+console.log("Litros consumidos: ".concat(litrosConsumidos.toFixed(2)));
